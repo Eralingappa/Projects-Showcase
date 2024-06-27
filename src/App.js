@@ -20,7 +20,7 @@ const apStatus = {
   fail: 'fail',
 }
 class App extends Component {
-  state = {data: [], ap: apStatus.initial, del: 'ALL'}
+  state = {data: [], ap: apStatus.initial, sel: 'ALL'}
 
   componentDidMount() {
     this.getData()
@@ -36,7 +36,7 @@ class App extends Component {
     }
 
     const response = await fetch(url, options)
-    if (response.o === true) {
+    if (response.ok === true) {
       const data = await response.json()
       const updateData = data.projects.map(i => ({
         id: i.id,
@@ -48,11 +48,11 @@ class App extends Component {
       this.setState({ap: apStatus.fail})
     }
   }
-  one = event => {
+  one =event => {
     this.setState({sel: event.target.value}, this.getData)
   }
   loadingView = () => (
-    <div testid="loader" className="Load">
+    <div testid="loader" className="load">
       <Loader type="ThreeDots" color="#008FFF" height={50} width={50} />
     </div>
   )
@@ -86,7 +86,7 @@ class App extends Component {
       </button>
     </div>
   )
-  finalRender =() => {
+  finalRender = () => {
     const {ap} = this.state
     switch (ap) {
       case apStatus.loading:
@@ -107,7 +107,7 @@ class App extends Component {
           <img
             src="https://assets.ccbp.in/frontend/react-js/projects-showcase/website-logo-img.png"
             className="web"
-            alt="website  logo"
+            alt="website logo"
           />
         </nav>
         <div className="main-con">

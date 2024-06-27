@@ -10,63 +10,63 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.nav-el{
+.nav-el {
   background-color: #e2e8f0;
   height: 10vh;
   padding: 20px;
 }
-.web{
+.web {
   height: 43px;
   width: 120px;
 }
-.sel{
+.sel {
   background-color: #f1f5f9;
-  width:300px;
+  width: 300px;
   padding-top: 8px;
   padding-left: 8px;
   border: 1px solid #e6e9ec;
 }
-.fail-con{
+.fail-con {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
 }
 
-.ima{
+.ima {
   height: 234px;
   width: 231px;
 }
-.heading{
+.heading {
   color: #475569;
   font-size: 23px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: bold;
 }
-.para{
+.para {
   color: #475569;
   font-size: 23px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
-.app-con{
+.app-con {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
 }
-.load{
+.load {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.q-con{
+.q-con {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
 }
-.but{
+.but {
   background-color: #328af2;
   color: #ffffff;
   padding: 3px;
