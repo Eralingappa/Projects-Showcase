@@ -48,11 +48,13 @@ class App extends Component {
       this.setState({ap: apStatus.fail})
     }
   }
-  one =event => {
+
+  one = event => {
     this.setState({sel: event.target.value}, this.getData)
   }
+
   loadingView = () => (
-    <div testid="loader" className="load">
+    <div className="load">
       <Loader type="ThreeDots" color="#008FFF" height={50} width={50} />
     </div>
   )
@@ -70,6 +72,7 @@ class App extends Component {
       </div>
     )
   }
+
   failureView = () => (
     <div className="fail-con">
       <imag
@@ -86,6 +89,7 @@ class App extends Component {
       </button>
     </div>
   )
+
   finalRender = () => {
     const {ap} = this.state
     switch (ap) {
@@ -99,6 +103,7 @@ class App extends Component {
         return null
     }
   }
+
   render() {
     const {sel} = this.state
     return (
